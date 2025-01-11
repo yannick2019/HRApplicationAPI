@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
+using HRApplicationAPI.Interfaces;
 using HRApplicationAPI.Models.DbModels;
 using HRApplicationAPI.Models.InputModels;
-using HRApplicationAPI.Services.Interfaces;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 

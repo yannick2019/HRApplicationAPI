@@ -6,6 +6,7 @@ using HRApplicationAPI.Extensions;
 using HRApplicationAPI.Services;
 using Microsoft.AspNetCore.Mvc;
 using System.Text.Json.Serialization;
+using HRApplicationAPI.Interfaces;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -39,8 +40,8 @@ builder.Services.AddAuthenticationService(builder.Configuration);
 builder.Services.AddSwaggerService();
 
 builder.Services.AddScoped<DBSeeder>();
-builder.Services.AddTransient<AuthService>();
-builder.Services.AddTransient<EventService>();
+builder.Services.AddTransient<IAuthService, AuthService>();
+builder.Services.AddTransient<IEventService, EventService>();
 
 builder.Services.AddCors(policyBuilder =>
     policyBuilder.AddDefaultPolicy(policy =>

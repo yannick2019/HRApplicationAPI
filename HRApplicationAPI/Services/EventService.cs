@@ -1,7 +1,7 @@
 ﻿using HRApplicationAPI.Data;
 using HRApplicationAPI.Helpers;
+using HRApplicationAPI.Interfaces;
 using HRApplicationAPI.Models.DbModels;
-using HRApplicationAPI.Services.Interfaces;
 using Microsoft.EntityFrameworkCore;
 
 namespace HRApplicationAPI.Services

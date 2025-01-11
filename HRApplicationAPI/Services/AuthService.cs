@@ -1,7 +1,7 @@
 ﻿using HRApplicationAPI.Data;
 using HRApplicationAPI.Helpers;
+using HRApplicationAPI.Interfaces;
 using HRApplicationAPI.Models.DbModels;
-using HRApplicationAPI.Services.Interfaces;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;

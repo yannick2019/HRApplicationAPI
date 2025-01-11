@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
+using HRApplicationAPI.Interfaces;
 using HRApplicationAPI.Models.DbModels;
 using HRApplicationAPI.Models.InputModels;
-using HRApplicationAPI.Services.Interfaces;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
@@ -29,7 +29,7 @@ namespace HRApplicationAPI.Controllers
         }
 
         [HttpGet("all")]
-        [Authorize]
+        //[Authorize]
         public ActionResult<Event[]> GetAll()
         {
             try

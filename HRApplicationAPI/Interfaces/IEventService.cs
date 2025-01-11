@@ -1,6 +1,6 @@
 ﻿using HRApplicationAPI.Models.DbModels;
 
-namespace HRApplicationAPI.Services.Interfaces
+namespace HRApplicationAPI.Interfaces
 {
     public interface IEventService
     {
