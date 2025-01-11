@@ -1,6 +1,7 @@
 ﻿using HRApplicationAPI.Data;
 using HRApplicationAPI.Helpers;
 using HRApplicationAPI.Models.DbModels;
+using HRApplicationAPI.Services.Interfaces;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
@@ -9,7 +10,7 @@ using BC = BCrypt.Net.BCrypt;
 
 namespace HRApplicationAPI.Services
 {
-    public class AuthService
+    public class AuthService : IAuthService
     {
         private readonly IConfiguration _configuration;
         private readonly DataContext _dataContext;

@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
 using HRApplicationAPI.Models.DbModels;
 using HRApplicationAPI.Models.InputModels;
-using HRApplicationAPI.Services;
+using HRApplicationAPI.Services.Interfaces;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
@@ -11,14 +11,14 @@ namespace HRApplicationAPI.Controllers
     [ApiController]
     public class EventsController : ControllerBase
     {
-        private readonly AuthService _authService;
-        private readonly EventService _eventService;
+        private readonly IAuthService _authService;
+        private readonly IEventService _eventService;
         private readonly IMapper _mapper;
         private readonly ILogger<EventsController> _logger;
 
         public EventsController(
-            AuthService authService, 
-            EventService eventService,
+            IAuthService authService, 
+            IEventService eventService,
             IMapper mapper, 
             ILogger<EventsController> logger)
         {

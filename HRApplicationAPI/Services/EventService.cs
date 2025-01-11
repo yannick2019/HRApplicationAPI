@@ -1,11 +1,12 @@
 ﻿using HRApplicationAPI.Data;
 using HRApplicationAPI.Helpers;
 using HRApplicationAPI.Models.DbModels;
+using HRApplicationAPI.Services.Interfaces;
 using Microsoft.EntityFrameworkCore;
 
 namespace HRApplicationAPI.Services
 {
-    public class EventService
+    public class EventService : IEventService
     {
         private readonly DataContext _dataContext;
 

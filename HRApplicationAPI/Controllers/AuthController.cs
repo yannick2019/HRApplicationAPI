@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
 using HRApplicationAPI.Models.DbModels;
 using HRApplicationAPI.Models.InputModels;
-using HRApplicationAPI.Services;
+using HRApplicationAPI.Services.Interfaces;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
@@ -11,11 +11,11 @@ namespace HRApplicationAPI.Controllers
     [ApiController]
     public class AuthController : ControllerBase
     {
-        private readonly AuthService _authService;
+        private readonly IAuthService _authService;
         private readonly ILogger<AuthController> _logger;
         private readonly IMapper _mapper;
 
-        public AuthController(AuthService authService, ILogger<AuthController> logger, IMapper mapper)
+        public AuthController(IAuthService authService, ILogger<AuthController> logger, IMapper mapper)
         {
             _authService = authService;
             _logger = logger;
